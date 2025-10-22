@@ -2,33 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
-  padding: 0.75rem 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 20px rgba(30, 41, 59, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 60px;
+  height: 70px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .navbar-logo a {
-  font-size: 1.7rem;
-  font-weight: bold;
-  background: linear-gradient(135deg, #295683 0%, #E63946 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1e293b;
   text-decoration: none;
-  letter-spacing: 2px;
+  letter-spacing: -0.025em;
   transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 .navbar-logo a:hover {
-  background: linear-gradient(135deg, #E63946 0%, #295683 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  transform: scale(1.02);
+  color: #3b82f6;
+  transform: translateY(-1px);
 }
 
 .navbar-toggle {
@@ -40,9 +37,10 @@
 .bar {
   width: 25px;
   height: 3px;
-  background: #295683;
+  background: #1e293b;
   margin: 4px 0;
   transition: 0.4s;
+  border-radius: 2px;
 }
 
 .navbar-links {
@@ -58,34 +56,43 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: #333;
-  font-size: 1.1rem;
-  transition: color 0.2s;
-  padding-bottom: 2px;
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
 }
 
-.navbar-links a.active,
 .navbar-links a:hover {
-  color: #b48a78;
-  border-bottom: 2px solid #b48a78;
+  color: #1e293b;
+  background: #f1f5f9;
+}
+
+.navbar-links a.active {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  font-weight: 600;
 }
 
 /* Mobile Responsive Styles */
 @media (max-width: 900px) {
   .navbar {
-    padding: 0.4rem 0.7rem;
-    height: 48px;
+    padding: 0.75rem 1rem;
+    height: 60px;
     min-width: 0;
     box-sizing: border-box;
     position: relative;
     z-index: 100;
   }
   .navbar-logo a {
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    color: #d4af37;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: -0.025em;
+    color: #1e293b;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
     padding: 0;
     margin: 0;
   }
@@ -102,7 +109,7 @@
   .bar {
     height: 3px;
     width: 100%;
-    background: #d4af37;
+    background: #1e293b;
     margin: 3px 0;
     border-radius: 2px;
     transition: 0.3s;
@@ -112,13 +119,15 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(120deg, #2d1e10 80%, #4a3c28 100%);
+    background: #ffffff;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.7rem 0.2rem;
+    padding: 1rem;
     border-radius: 0 0 12px 12px;
-    box-shadow: 0 4px 24px rgba(212,175,55,0.10);
+    box-shadow: 0 8px 32px rgba(30, 41, 59, 0.15);
+    border: 1px solid #e2e8f0;
+    border-top: none;
     width: 100vw;
     min-width: 0;
     display: none;
@@ -135,40 +144,44 @@
   }
   .navbar-links a {
     font-size: 1rem;
-    padding: 0.6rem 0.2rem;
-    color: #fdf6ed;
+    padding: 0.75rem 1rem;
+    color: #64748b;
     border-radius: 8px;
     display: block;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    margin: 0.1rem 0;
+    transition: all 0.3s ease;
+    margin: 0.25rem 0;
+    font-weight: 500;
+    width: 90%;
   }
-  .navbar-links a.active,
   .navbar-links a:hover {
-    background: #d4af37;
-    color: #2d1e10;
-    border-bottom: none;
+    background: #f1f5f9;
+    color: #1e293b;
+  }
+  .navbar-links a.active {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    font-weight: 600;
   }
 }
 
 /* Even smaller screens */
 @media (max-width: 600px) {
   .navbar {
-    /* padding: 0.2rem 0.2rem; */
-    height: 40px;
+    padding: 0.5rem 0.75rem;
+    height: 50px;
   }
   .navbar-logo a {
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    letter-spacing: -0.025em;
   }
   .navbar-toggle {
     width: 22px;
     height: 22px;
   }
   .navbar-links {
-    padding: 0.5rem 0.1rem;
+    padding: 0.75rem;
     border-radius: 0 0 8px 8px;
-    font-size: 0.92rem;
     gap: 0.3rem;
   }
   .navbar-links a {

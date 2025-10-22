@@ -36,7 +36,7 @@ function About() {
             About Arham Tax Consultancy
           </h1>
           <p className="arham-hero-subtext">
-            Empowering businesses and individuals with trusted financial solutions since inception.
+            Empowering businesses with trusted financial solutions and seamless loan facilitation through our bank partnerships since inception.
           </p>
           <button
             className="arham-hero-btn"
@@ -61,7 +61,7 @@ function About() {
           <div className="arham-story-text slide-in-right">
             <h2 className="arham-section-title underline-animate">Our Story</h2>
             <p className="arham-story-desc">
-              Founded to simplify taxation and accounting, we help clients stay compliant and achieve financial clarity.
+              Founded to simplify taxation, loan processing, and accounting, we help clients achieve financial clarity through our extensive bank partnerships.
             </p>
             <div className="arham-timeline">
               <div className="arham-timeline-item">
@@ -74,7 +74,7 @@ function About() {
               </div>
               <div className="arham-timeline-item">
                 <span className="arham-timeline-year">2020</span>
-                <span className="arham-timeline-text">Launched Investment Planning</span>
+                <span className="arham-timeline-text">Established Bank Partnerships for Loans</span>
               </div>
               <div className="arham-timeline-item">
                 <span className="arham-timeline-year">2023</span>
@@ -111,7 +111,7 @@ function About() {
             <h3 className="arham-founder-title underline-animate">Ronak Shah</h3>
             <p className="arham-founder-role">Founder & Chief Consultant</p>
             <p className="arham-founder-bio">
-              With 15+ years of experience in tax, accounting, and financial planning, Ronak Shah is dedicated to helping clients achieve financial clarity and compliance. His expertise spans tax strategy, investment planning, and business advisory, always with a focus on personalized, client-first service.
+              With 15+ years of experience in tax, loan consultation, accounting, and financial planning, Ronak Shah has built strong relationships with leading banks to ensure seamless loan approvals for clients. His expertise spans tax strategy, loan facilitation, and business advisory, always with a focus on personalized, client-first service.
             </p>
             <div className="arham-founder-actions">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="arham-founder-linkedin-btn">
@@ -145,7 +145,7 @@ function About() {
           <div className="arham-value-card value-animate value-delay-4">
             <FaChartLine className="arham-value-icon" />
             <h4 className="arham-value-title">Growth</h4>
-            <p className="arham-value-desc">Helping you achieve financial progress and security for a brighter future.</p>
+            <p className="arham-value-desc">Facilitating business expansion through our bank partnerships and seamless loan processing for your growth needs.</p>
           </div>
         </div>
       </section>
