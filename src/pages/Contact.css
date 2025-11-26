@@ -11,86 +11,26 @@
   scroll-behavior: smooth;
 }
 
-/* Hero Section */
-.contact-hero {
-  width: 100%;
-  padding: 6rem 0 4rem 0;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+/* Animation classes */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.contact-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(30, 41, 59, 0.1);
-  opacity: 0.5;
-}
-.contact-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-.contact-hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 2rem;
-  letter-spacing: -0.025em;
-  font-family: 'Inter', sans-serif;
-}
-.contact-hero-subtext {
-  font-size: 1.3rem;
-  color: #cbd5e1;
-  margin-bottom: 3rem;
-  line-height: 1.7;
-  font-weight: 400;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Inter', sans-serif;
-}
-.contact-hero-illustration {
-  margin-top: 2rem;
-}
-.contact-hero-illustration img {
-  width: 280px;
-  max-width: 90vw;
-  margin: 0 auto;
-  display: block;
-  border-radius: 2rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  border: 3px solid rgba(255, 255, 255, 0.1);
-}
-.fade-in {
-  animation: fadeIn 1.2s cubic-bezier(.4,1.4,.6,1);
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: none; }
-}
-.fade-in, .fade-up {
-  animation-fill-mode: both;
+.fade-up.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Main Contact Content Container */
 .contact-main-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 4rem 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-top: -2rem;
-  margin-bottom: 5rem;
-  position: relative;
-  z-index: 10;
+  gap: 3rem;
+  align-items: stretch;
 }
 
 /* Section 1: Contact Form & Info */
@@ -100,8 +40,8 @@
   border: 1px solid #e2e8f0;
   padding: 3rem;
   box-shadow: 0 10px 40px rgba(30, 41, 59, 0.1);
-  position: relative;
-  top: -3rem;
+  display: flex;
+  flex-direction: column;
 }
 .contact-form-title {
   font-size: 2.25rem;
@@ -123,6 +63,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex: 1;
 }
 .form-row {
   width: 100%;
@@ -201,8 +142,8 @@
   border: 1px solid #e2e8f0;
   padding: 3rem;
   box-shadow: 0 10px 40px rgba(30, 41, 59, 0.1);
-  position: relative;
-  top: -3rem;
+  display: flex;
+  flex-direction: column;
 }
 .contact-info-title {
   font-size: 2.25rem;
@@ -224,6 +165,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex: 1;
 }
 .contact-info-card {
   background: #ffffff;
@@ -284,24 +226,7 @@
   border: none;
   transition: all 0.3s ease;
 }
-/* Animations */
-.fade-in {
-  animation: fadeIn 1.2s cubic-bezier(.4,1.4,.6,1);
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: none; }
-}
 
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-up.animate-in {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Full-width CTA Section */
 .contact-final-cta {
@@ -363,10 +288,7 @@
   .contact-main-content {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0 1rem;
-  }
-  .contact-hero-title {
-    font-size: 3rem;
+    padding: 3rem 1rem;
   }
 }
 
@@ -374,30 +296,19 @@
   .contact-main-content {
     grid-template-columns: 1fr;
     gap: 2rem;
-    margin-top: 1rem;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
   }
-  .contact-hero {
-    padding: 4rem 0 3rem 0;
-  }
-  .contact-hero-title {
-    font-size: 2.5rem;
-  }
-  .contact-hero-subtext {
-    font-size: 1.1rem;
-  }
-  
+
   .contact-form-section,
   .contact-info-section {
     padding: 2.5rem 2rem;
-    top: -1rem;
   }
-  
+
   .contact-form-title,
   .contact-info-title {
     font-size: 1.75rem;
   }
-  
+
   .contact-final-cta {
     padding: 3rem 1rem;
   }
@@ -407,32 +318,25 @@
 }
 
 @media (max-width: 480px) {
-  .contact-hero-content {
-    padding: 0 1rem;
+  .contact-main-content {
+    padding: 1.5rem 1rem;
   }
-  .contact-hero-title {
-    font-size: 2.25rem;
-  }
-  .contact-hero-subtext {
-    font-size: 1.1rem;
-  }
-  
+
   .contact-form-section,
   .contact-info-section {
     padding: 2rem 1.5rem;
-    margin: 0 0.5rem;
   }
-  
+
   .contact-info-card {
     flex-direction: column;
     text-align: center;
     gap: 0.75rem;
   }
-  
+
   .contact-map-container iframe {
     height: 250px;
   }
-  
+
   .contact-final-cta-heading {
     font-size: 1.5rem;
   }

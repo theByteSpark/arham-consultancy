@@ -1,0 +1,191 @@
+/* Reusable Page Hero Component Styles */
+.page-hero {
+  position: relative;
+  width: 100vw;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #1e293b;
+}
+
+.page-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.page-hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  opacity: 0.85;
+  z-index: 2;
+}
+
+.page-hero-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.page-hero-overlay {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-hero-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline animation */
+.page-hero-title.underline-animate {
+  position: relative;
+}
+
+.page-hero-title.underline-animate::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  bottom: -12px;
+  width: 80%;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: heroUnderlineGrow 1.2s forwards 0.5s;
+}
+
+@keyframes heroUnderlineGrow {
+  to {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+.page-hero-subtext {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  opacity: 0;
+  animation: heroFadeInSubtext 1.2s forwards 0.8s;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+@keyframes heroFadeInSubtext {
+  to {
+    opacity: 1;
+  }
+}
+
+.page-hero-btn {
+  background: #3b82f6;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  letter-spacing: 0.025em;
+}
+
+.page-hero-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Fade-in animation */
+.page-hero.fade-in {
+  opacity: 0;
+  animation: heroFadeIn 1.2s forwards;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .page-hero {
+    min-height: 50vh;
+  }
+  
+  .page-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .page-hero-subtext {
+    font-size: 1.1rem;
+  }
+  
+  .page-hero-overlay {
+    padding: 3rem 1.5rem;
+    max-width: 95vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    min-height: 40vh;
+  }
+  
+  .page-hero-title {
+    font-size: 1.75rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .page-hero-subtext {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .page-hero-overlay {
+    padding: 2rem 1rem;
+  }
+  
+  .page-hero-btn {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+  }
+}

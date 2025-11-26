@@ -1,6 +1,8 @@
 import React from 'react';
 import './Products.css';
 import Footer from '../components/Footer';
+import PageHero from '../components/PageHero';
+import HeroImage from '../images/hero-bg.webp';
 
 const socialLinks = [
   { href: 'https://instagram.com', icon: 'fab fa-instagram', label: 'Instagram' },
@@ -33,8 +35,13 @@ const products = [
 
 const Products = () => (
   <>
+    <PageHero
+      title="Our Products"
+      subtitle="Discover our curated collection of premium products designed to meet your needs with quality and elegance."
+      backgroundImage={HeroImage}
+    />
     <div className="products-page">
-      <h2>Our Collection</h2>
+      <h2 className="products-section-title">Explore Our Collection</h2>
       <div className="products-grid">
         {products.map((product, idx) => (
           <div className="product-card" key={idx}>

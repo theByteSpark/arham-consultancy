@@ -1,14 +1,17 @@
 .products-page {
   max-width: 1200px;
-  margin: 2.5rem auto;
-  padding: 2rem 1rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
 }
 
-.products-page h2 {
-  color: #b48a78;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+.products-section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 3rem;
   text-align: center;
+  letter-spacing: -0.025em;
 }
 
 .products-grid {

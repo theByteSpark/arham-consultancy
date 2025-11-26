@@ -1,7 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import Footer from "../components/Footer";
+import PageHero from "../components/PageHero";
 import useScrollAnimation from "../hooks/useScrollAnimation";
+import HeroImage from "../images/hero-bg.webp";
 import "./Contact.css";
 
 function Contact() {
@@ -20,7 +22,6 @@ function Contact() {
   const formSectionRef = useScrollAnimation('animate-in');
   const infoSectionRef = useScrollAnimation('animate-in');
   const mapSectionRef = useScrollAnimation('animate-in');
-  const ctaSectionRef = useScrollAnimation('animate-in');
 
   // Validation
   const validate = () => {
@@ -61,17 +62,11 @@ function Contact() {
   return (
     <div className="contact-root">
       {/* Hero Section */}
-      <section className="contact-hero fade-in">
-        <div className="contact-hero-content">
-          <h1 className="contact-hero-title">Get in Touch with Us</h1>
-          <p className="contact-hero-subtext">
-            Ready to take control of your finances? Our expert team is here to provide personalized solutions for all your tax, accounting, and financial planning needs.
-          </p>
-          <div className="contact-hero-illustration">
-            <img src="/images/contact-illustration.png" alt="Professional consultation" />
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Contact Us"
+        subtitle="Ready to take control of your finances? Our expert team is here to provide personalized solutions for all your tax, accounting, and financial planning needs."
+        backgroundImage={HeroImage}
+      />
 
       {/* Main Contact Content - Two Sections */}
       <div className="contact-main-content">
@@ -188,7 +183,7 @@ function Contact() {
               </div>
             </div>
           </div>
-          
+
           {/* Google Map */}
           <div className="contact-map-container" ref={mapSectionRef}>
             <iframe

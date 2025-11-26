@@ -1,7 +1,9 @@
 import React from "react";
 import "./Services.css";
 import Footer from "../components/Footer";
+import PageHero from "../components/PageHero";
 import { Link } from "react-router-dom";
+import HeroImage from "../images/hero-bg.webp";
 
 const products = [
 	{
@@ -139,17 +141,11 @@ function Services() {
 	return (
 		<div className="services-root">
 			{/* Hero Section */}
-			<section className="services-hero fade-in">
-				<div className="services-hero-content">
-					<h1 className="services-hero-title">Our Services</h1>
-					<p className="services-hero-subtext">
-						Comprehensive financial solutions to meet your personal and business needs.
-					</p>
-					<div className="services-hero-illustration">
-						{/* <img src="/images/hero-bg.webp" alt="Business Finance Illustration" className="services-hero-img" /> */}
-					</div>
-				</div>
-			</section>
+			<PageHero
+				title="Our Services"
+				subtitle="Comprehensive financial solutions to meet your personal and business needs. From tax planning to investment advisory, we've got you covered."
+				backgroundImage={HeroImage}
+			/>
 
 			{/* Services Grid Section */}
 			<section className="services-overview-section">
@@ -269,10 +265,10 @@ function Services() {
 					<a href="/contact" className="final-cta-btn">Book a Free Consultation</a>
 				</div>
 			</section> */}
-                  <section className="arham-cta-section">
-        <h2 className="arham-cta-title">Ready to simplify your finances?</h2>
-        <Link to="/contact" className="arham-cta-btn">Book a Free Consultation</Link>
-      </section>
+			<section className="arham-cta-section">
+				<h2 className="arham-cta-title">Ready to simplify your finances?</h2>
+				<Link to="/contact" className="arham-cta-btn">Book a Free Consultation</Link>
+			</section>
 			<section style={{ marginTop: "5rem" }}>
 				<Footer />
 			</section>

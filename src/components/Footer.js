@@ -13,9 +13,10 @@ const Footer = () => (
     <div className="footer-grid">
       <div className="footer-brand">
         <span className="footer-logo">Arham Tax Consultancy</span>
-        <p className="footer-tagline">{subheader}</p>
+        {/* <p className="footer-tagline">{subheader}</p> */}
         <div className="footer-address">
-          <span className="footer-contact-label">Address:</span> {address}
+          <span className="footer-contact-label">Address</span>
+          <p className="footer-tagline">{address}</p>
         </div>
       </div>
       
@@ -25,7 +26,7 @@ const Footer = () => (
           <Link to="/" className="footer-link">Home</Link>
           <Link to="/about" className="footer-link">About</Link>
           <Link to="/services" className="footer-link">Services</Link>
-          <Link to="/contact" className="footer-link">Contact</Link>
+          <Link to="/contact" className="footer-link">Contact Us</Link>
         </nav>
       </div>
 
@@ -45,10 +46,10 @@ const Footer = () => (
         <h3 className="footer-section-title">Contact Us</h3>
         <div className="footer-contact-simple">
           <div className="footer-contact-item">
-            <span className="footer-contact-label"><FaEnvelope className="footer-contact-icon" /> :</span> <a href={`mailto:${email}`}>{email}</a>
+            <span className="footer-contact-label"><FaEnvelope className="footer-contact-icon" /></span> <a href={`mailto:${email}`}>{email}</a>
           </div>
           <div className="footer-contact-item">
-            <span className="footer-contact-label"><FaPhoneAlt className="footer-contact-icon" /> :</span> <a href={`tel:${phone}`}>{phone}</a>
+            <span className="footer-contact-label"><FaPhoneAlt className="footer-contact-icon" /></span> <a href={`tel:${phone}`}>{phone}</a>
           </div>
         </div>
         <div className="footer-social">
@@ -69,6 +70,12 @@ const Footer = () => (
     </div>
     <div className="footer-bottom">
       <span>© {new Date().getFullYear()} Arham Tax Consultancy. All rights reserved.</span>
+      <span>
+        Designed By&nbsp;
+        <a style={{color:'white'}} href='https://thebytespark.com'>
+          Bytespark
+        </a> 
+      </span>
     </div>
   </footer>
 );

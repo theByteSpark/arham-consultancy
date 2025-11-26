@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { FaCalculator, FaBuilding, FaCreditCard, FaHandshake, FaCheckCircle, FaUserTie, FaChartLine, FaCertificate } from "react-icons/fa";
 import "./Home.css";
 import Footer from "../components/Footer";
-import AboutHeroImage from "../images/about-hero.webp";
-import AboutContentImage from "../images/about-content.jpeg";
+import LoanImage from "../images/loan-con.avif";
+import FinancialServicesImage from "../images/fin-sevice.jpeg";
+import AboutHeroImage from "../images/about-hero.png";
+import TaxConsultationImage from "../images/tax-xon.webp";
+import BusinessRegImage from "../images/business-register.jpeg";
 
 export default function Home() {
   return (
@@ -61,9 +64,9 @@ export default function Home() {
               </p>
             </div>
             <div className="services-grid">
-                            <div className="service-card">
+              <div className="service-card">
                 <div className="service-image">
-                  <img src={AboutHeroImage} alt="Loan consultation and bank partnerships" className="card-image" />
+                  <img src={LoanImage} alt="Loan consultation and bank partnerships" className="card-image" />
                 </div>
                 <div className="service-content">
                   {/* <div className="service-icon">
@@ -82,7 +85,7 @@ export default function Home() {
               </div>
               <div className="service-card">
                 <div className="service-image">
-                  <img src={AboutContentImage} alt="Tax consultation workspace" className="card-image" />
+                  <img src={TaxConsultationImage} alt="Tax consultation workspace" className="card-image" />
                 </div>
                 <div className="service-content">
                   {/* <div className="service-icon">
@@ -101,7 +104,7 @@ export default function Home() {
               </div>
               <div className="service-card">
                 <div className="service-image">
-                  <img src={AboutHeroImage} alt="Business registration office" className="card-image" />
+                  <img src={BusinessRegImage} alt="Business registration office" className="card-image" />
                 </div>
                 <div className="service-content">
                   {/* <div className="service-icon">
@@ -120,7 +123,7 @@ export default function Home() {
               </div>
               <div className="service-card">
                 <div className="service-image">
-                  <img src={AboutContentImage} alt="Financial planning consultation" className="card-image" />
+                  <img src={FinancialServicesImage} alt="Financial planning consultation" className="card-image" />
                 </div>
                 <div className="service-content">
                   {/* <div className="service-icon">
