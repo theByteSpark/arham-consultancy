@@ -1,6 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaCalculator, FaBuilding, FaCreditCard, FaHandshake, FaCheckCircle, FaUserTie, FaChartLine, FaCertificate } from "react-icons/fa";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, FreeMode } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
 import "./Home.css";
 import Footer from "../components/Footer";
 import LoanImage from "../images/loan-con.avif";
@@ -9,7 +13,51 @@ import AboutHeroImage from "../images/about-hero.png";
 import TaxConsultationImage from "../images/tax-xon.webp";
 import BusinessRegImage from "../images/business-register.jpeg";
 
+// Bank Logo Imports (local images)
+import AxisBankLogo from "../images/banks/axis-bank.svg";
+import KotakLogo from "../images/banks/kotak.svg";
+import BobLogo from "../images/banks/bob.svg";
+import CanaraLogo from "../images/banks/canara.svg";
+import IndusIndLogo from "../images/banks/indusind.svg";
+import IdfcLogo from "../images/banks/idfc.svg";
+import YesBankLogo from "../images/banks/yes-bank.svg";
+import FederalBankLogo from "../images/banks/federal.svg";
+import BoiLogo from "../images/banks/boi.svg";
+
 export default function Home() {
+  const swiperRef = useRef(null);
+
+  // Top 15 Indian Banks Data with reliable logo URLs
+  const bankPartners = [
+    { name: "State Bank of India", logo: "https://cdn.worldvectorlogo.com/logos/sbi-state-bank-of-india.svg", initials: "SBI" },
+    { name: "HDFC Bank", logo: "https://cdn.worldvectorlogo.com/logos/hdfc-bank-logo.svg", initials: "HDFC" },
+    { name: "ICICI Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/ICICI_Bank_Logo.svg/200px-ICICI_Bank_Logo.svg.png", initials: "ICICI" },
+    { name: "Axis Bank", logo: AxisBankLogo, initials: "AXIS" },
+    { name: "Kotak Mahindra", logo: KotakLogo, initials: "KOTAK" },
+    { name: "Bank of Baroda", logo: BobLogo, initials: "BOB" },
+    { name: "Punjab National Bank", logo: "https://cdn.worldvectorlogo.com/logos/punjab-national-bank.svg", initials: "PNB" },
+    { name: "Canara Bank", logo: CanaraLogo, initials: "CANARA" },
+    { name: "Union Bank", logo: "https://cdn.worldvectorlogo.com/logos/union-bank-of-india.svg", initials: "UBI" },
+    { name: "IndusInd Bank", logo: IndusIndLogo, initials: "INDUSIND" },
+    { name: "Yes Bank", logo: YesBankLogo, initials: "YES" },
+    { name: "IDFC First Bank", logo: IdfcLogo, initials: "IDFC" },
+    { name: "Federal Bank", logo: FederalBankLogo, initials: "FEDERAL" },
+    { name: "Bank of India", logo: BoiLogo, initials: "BOI" },
+  ];
+
+  // Handle hover pause - immediate response
+  const handleMouseEnter = () => {
+    if (swiperRef.current && swiperRef.current.autoplay) {
+      swiperRef.current.autoplay.stop();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (swiperRef.current && swiperRef.current.autoplay) {
+      swiperRef.current.autoplay.start();
+    }
+  };
+
   useEffect(() => {
     // Trigger animations on load
     const animatedElements = document.querySelectorAll('.animate-in');
@@ -101,6 +149,72 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Bank Partners Carousel Section */}
+        <section className="bank-partners-section">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">Our Trusted Bank Partners</h2>
+              <p className="section-subtitle">
+                We work with India's leading banks to provide you the best loan options
+              </p>
+            </div>
+          </div>
+          <div 
+            className="bank-carousel-wrapper"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Swiper
+              onSwiper={(swiper) => { swiperRef.current = swiper; }}
+              modules={[Autoplay, FreeMode]}
+              spaceBetween={30}
+              slidesPerView={2}
+              freeMode={{
+                enabled: true,
+                momentum: true,
+                momentumRatio: 0.25,
+              }}
+              loop={true}
+              speed={4000}
+              autoplay={{
+                delay: 1,
+                disableOnInteraction: false,
+              }}
+              grabCursor={true}
+              breakpoints={{
+                480: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                1024: { slidesPerView: 5 },
+                1280: { slidesPerView: 6 },
+              }}
+              className="bank-swiper"
+            >
+              {[...bankPartners, ...bankPartners].map((bank, index) => (
+                <SwiperSlide key={index}>
+                  <div className="bank-slide">
+                    <div className="bank-logo-container">
+                      <img 
+                        src={bank.logo} 
+                        alt={bank.name} 
+                        className="bank-logo"
+                        loading="lazy"
+                        onError={(e) => { 
+                          e.target.style.display = 'none'; 
+                          e.target.nextElementSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div className="bank-initials" style={{display: 'none'}}>
+                        {bank.initials}
+                      </div>
+                    </div>
+                    <span className="bank-name">{bank.name}</span>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </section>
 
