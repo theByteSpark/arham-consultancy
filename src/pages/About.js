@@ -1,7 +1,8 @@
 import React from "react";
 import { FaLinkedin, FaUserTie, FaBullseye, FaEye, FaBalanceScale, FaChartLine, FaShieldAlt, FaSyncAlt } from "react-icons/fa";
 import Footer from "../components/Footer";
-import AboutContentPhoto from "../images/about-hero.webp";
+import PageHero from "../components/PageHero";
+import AboutContentPhoto from "../images/about-hero.png";
 import { Link } from "react-router-dom";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 import "./About.css";
@@ -22,35 +23,18 @@ function About() {
   return (
     <div className="arham-about-root">
       {/* Hero Section */}
-      <section className="arham-about-hero fade-in" id="about-hero">
-        <div className="arham-hero-bg">
-          <div className="arham-hero-gradient" />
-          <img
-            src={AboutContentPhoto}
-            alt="Professional business team"
-            className="arham-hero-img"
-          />
-        </div>
-        <div className="arham-hero-overlay">
-          <h1 className="arham-hero-title underline-animate">
-            About Arham Tax Consultancy
-          </h1>
-          <p className="arham-hero-subtext">
-            Empowering businesses with trusted financial solutions and seamless loan facilitation through our bank partnerships since inception.
-          </p>
-          <button
-            className="arham-hero-btn"
-            onClick={() => {
-              const nextSection = document.getElementById('arham-story-section');
-              if (nextSection) {
-                nextSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          >
-            Learn More
-          </button>
-        </div>
-      </section>
+      <PageHero
+        title="About Arham Tax Consultancy"
+        subtitle="Empowering businesses with trusted financial solutions and seamless loan facilitation through our bank partnerships since inception."
+        backgroundImage={AboutContentPhoto}
+        // buttonText="Learn More"
+        onButtonClick={() => {
+          const nextSection = document.getElementById('arham-story-section');
+          if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
+      />
 
       {/* Our Story Section */}
       <section className="arham-story-section" id="arham-story-section">

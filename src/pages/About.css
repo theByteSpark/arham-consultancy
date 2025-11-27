@@ -20,13 +20,13 @@
 .arham-cta-title {
   font-family: 'Inter', sans-serif;
   font-size: 2rem;
-  color: #1e293b;
+  color: #183256;
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 .arham-cta-btn {
-  background: #3b82f6;
+  background: #183256;
   color: #fff;
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
@@ -40,9 +40,9 @@
   letter-spacing: 0.025em;
 }
 .arham-cta-btn:hover {
-  background: #2563eb;
+  background: #0f1a2e;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 10px 25px rgba(24, 50, 86, 0.3);
 }
 @media (max-width: 768px) {
   .arham-cta-title {
@@ -101,18 +101,18 @@
 }
 .arham-value-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(30, 41, 59, 0.1);
-  border-color: #3b82f6;
+  box-shadow: 0 20px 40px rgba(24, 50, 86, 0.1);
+  border-color: #183256;
 }
 .arham-value-icon {
   font-size: 2.5rem;
-  color: #3b82f6;
+  color: #183256;
   margin-bottom: 1rem;
 }
 .arham-value-title {
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
-  color: #1e293b;
+  color: #183256;
   font-weight: 700;
   margin-bottom: 1rem;
   text-align: center;
@@ -191,8 +191,8 @@
 }
 .arham-founder-card.hover-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 25px 50px rgba(30, 41, 59, 0.15);
-  border-color: #3b82f6;
+  box-shadow: 0 25px 50px rgba(24, 50, 86, 0.15);
+  border-color: #183256;
 }
 .arham-founder-img-wrap {
   flex: 0 0 auto;
@@ -205,8 +205,8 @@
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #3b82f6;
-  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+  border: 4px solid #183256;
+  box-shadow: 0 8px 32px rgba(24, 50, 86, 0.2);
 }
 .arham-founder-info {
   flex: 1;
@@ -217,13 +217,13 @@
 .arham-founder-title {
   font-family: 'Inter', sans-serif;
   font-size: 2rem;
-  color: #1e293b;
+  color: #183256;
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
 .arham-founder-role {
   font-size: 1.2rem;
-  color: #3b82f6;
+  color: #183256;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -244,7 +244,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: #1e293b;
+  background: #183256;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
@@ -255,12 +255,12 @@
   transition: all 0.3s ease;
 }
 .arham-founder-linkedin-btn:hover {
-  background: #334155;
+  background: #0f1a2e;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(30, 41, 59, 0.3);
+  box-shadow: 0 8px 20px rgba(24, 50, 86, 0.3);
 }
 .arham-founder-consult-btn {
-  background: #3b82f6;
+  background: #183256;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
@@ -271,9 +271,9 @@
   transition: all 0.3s ease;
 }
 .arham-founder-consult-btn:hover {
-  background: #2563eb;
+  background: #0f1a2e;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 20px rgba(24, 50, 86, 0.3);
 }
 /* Responsive Founder Section */
 @media (max-width: 900px) {
@@ -355,18 +355,18 @@
 }
 .arham-mv-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(30, 41, 59, 0.15);
-  border-color: #3b82f6;
+  box-shadow: 0 20px 40px rgba(24, 50, 86, 0.15);
+  border-color: #183256;
 }
 .arham-mv-icon {
   font-size: 3rem;
-  color: #3b82f6;
+  color: #183256;
   margin-bottom: 1.5rem;
 }
 .arham-mv-title {
   font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
-  color: #1e293b;
+  color: #183256;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -470,8 +470,8 @@
 .arham-section-title {
   font-family: 'Inter', sans-serif;
   font-size: 2.5rem;
-  color: #1e293b;
-  font-weight: 800;
+  color: #183256;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 .arham-story-desc {
@@ -492,11 +492,11 @@
   align-items: center;
   gap: 1.5rem;
   font-size: 1.1rem;
-  color: #1e293b;
+  color: #183256;
   font-family: 'Inter', sans-serif;
 }
 .arham-timeline-year {
-  background: #3b82f6;
+  background: #183256;
   color: #ffffff;
   font-weight: 700;
   border-radius: 8px;
@@ -581,7 +581,7 @@
 }
 /* Professional Section Titles */
 .arham-section-title.underline-animate::after {
-  background: #3b82f6;
+  background: #183256;
   height: 3px;
 }
 

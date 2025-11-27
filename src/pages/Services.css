@@ -10,8 +10,8 @@
 .how-we-work-title {
   font-family: 'Inter', sans-serif;
   font-size: 2.5rem;
-  color: #1e293b;
-  font-weight: 800;
+  color: #183256;
+  font-weight: 700;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -41,8 +41,8 @@
 }
 .how-step:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(30, 41, 59, 0.12);
-  border-color: #3b82f6;
+  box-shadow: 0 15px 35px rgba(24, 50, 86, 0.12);
+  border-color: #183256;
 }
 .how-step-icon {
   font-size: 2.2rem;
@@ -51,7 +51,7 @@
 .how-step-circle {
   width: 40px;
   height: 40px;
-  background: #3b82f6;
+  background: #183256;
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -65,7 +65,7 @@
 .how-step-label {
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
-  color: #1e293b;
+  color: #183256;
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-align: center;
@@ -80,7 +80,7 @@
 .how-step-line {
   flex: 0 0 60px;
   height: 3px;
-  background: #3b82f6;
+  background: #183256;
   border-radius: 2px;
   margin: 0 0.5rem;
 }
@@ -154,8 +154,8 @@
 .pricing-title {
   font-family: 'Inter', sans-serif;
   font-size: 2.5rem;
-  color: #1e293b;
-  font-weight: 800;
+  color: #183256;
+  font-weight: 700;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -181,12 +181,12 @@
 }
 .pricing-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(30, 41, 59, 0.15);
-  border-color: #3b82f6;
+  box-shadow: 0 20px 50px rgba(24, 50, 86, 0.15);
+  border-color: #183256;
 }
 .pricing-popular {
-  border: 2px solid #3b82f6;
-  box-shadow: 0 15px 45px rgba(59, 130, 246, 0.2);
+  border: 2px solid #183256;
+  box-shadow: 0 15px 45px rgba(24, 50, 86, 0.2);
   position: relative;
 }
 .pricing-popular::before {
@@ -195,7 +195,7 @@
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: #3b82f6;
+  background: #183256;
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -208,13 +208,13 @@
 .pricing-plan {
   font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
-  color: #1e293b;
+  color: #183256;
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-align: center;
 }
 .pricing-popular .pricing-plan {
-  color: #3b82f6;
+  color: #183256;
 }
 .pricing-range {
   font-size: 1.25rem;
@@ -245,12 +245,12 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #3b82f6;
+  color: #183256;
   font-weight: 700;
   font-size: 1rem;
 }
 .pricing-btn {
-  background: #3b82f6;
+  background: #183256;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
@@ -265,9 +265,9 @@
   width: 100%;
 }
 .pricing-btn:hover {
-  background: #2563eb;
+  background: #0f1a2e;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 25px rgba(24, 50, 86, 0.3);
 }
 @media (max-width: 900px) {
   .pricing-section {

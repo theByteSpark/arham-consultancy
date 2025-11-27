@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import useScrollAnimation from "../hooks/useScrollAnimation";
-import HeroImage from "../images/hero-bg.webp";
+import HeroImage from "../images/about-hero.png";
 import "./Contact.css";
 
 function Contact() {

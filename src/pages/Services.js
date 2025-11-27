@@ -3,7 +3,7 @@ import "./Services.css";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import { Link } from "react-router-dom";
-import HeroImage from "../images/hero-bg.webp";
+import HeroImage from "../images/about-hero.png";
 
 const products = [
 	{
@@ -55,22 +55,22 @@ const testimonials = [
 	{
 		name: "Amit Patel",
 		feedback: "Arham made our tax filing seamless and stress-free! Highly recommended.",
-		avatar: "/images/avatar1.png"
+		avatar: "https://randomuser.me/api/portraits/men/32.jpg"
 	},
 	{
 		name: "Priya Shah",
 		feedback: "Professional, prompt, and always available for advice. Great team!",
-		avatar: "/images/avatar2.png"
+		avatar: "https://randomuser.me/api/portraits/women/44.jpg"
 	},
 	{
 		name: "Rajesh Mehta",
 		feedback: "Their accounting and compliance support helped us focus on growth.",
-		avatar: "/images/avatar3.png"
+		avatar: "https://randomuser.me/api/portraits/men/67.jpg"
 	},
 	{
 		name: "Sneha Desai",
 		feedback: "Excellent investment guidance and personal attention to our needs.",
-		avatar: "/images/avatar4.png"
+		avatar: "https://randomuser.me/api/portraits/women/65.jpg"
 	}
 ];
 
