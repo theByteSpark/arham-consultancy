@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaCalculator, FaBuilding, FaCreditCard, FaHandshake, FaCheckCircle, FaUserTie, FaChartLine, FaCertificate } from "react-icons/fa";
 import "./Home.css";
@@ -10,41 +10,93 @@ import TaxConsultationImage from "../images/tax-xon.webp";
 import BusinessRegImage from "../images/business-register.jpeg";
 
 export default function Home() {
+  useEffect(() => {
+    // Trigger animations on load
+    const animatedElements = document.querySelectorAll('.animate-in');
+    animatedElements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('visible');
+      }, index * 150);
+    });
+
+    // Counter animation for stats
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+      const target = counter.getAttribute('data-target');
+      const suffix = counter.getAttribute('data-suffix') || '';
+      let count = 0;
+      const increment = target / 40;
+      const updateCount = () => {
+        if (count < target) {
+          count += increment;
+          counter.textContent = Math.ceil(count) + suffix;
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.textContent = target + suffix;
+        }
+      };
+      setTimeout(updateCount, 800);
+    });
+  }, []);
+
   return (
     <>
       <main className="professional-home">
         {/* Hero Section */}
         <section className="hero-section">
+          <div className="hero-bg-shapes">
+            <div className="shape shape-1"></div>
+            <div className="shape shape-2"></div>
+            <div className="shape shape-3"></div>
+          </div>
           <div className="hero-container">
             <div className="hero-content">
-              <div className="hero-badge">
+              <div className="hero-badge animate-in">
                 <FaCertificate className="badge-icon" />
                 <span>Certified Tax & Financial Consultants</span>
               </div>
-              <h1 className="hero-title">
-                 Financial & Loan Consultation Services
+              
+              <h1 className="hero-title animate-in">
+                <span className="title-line">Financial & Loan</span>
+                <span className="title-line title-highlight">Consultation Services</span>
               </h1>
-              <p className="hero-subtitle">
-                Trusted expertise in taxation, loan facilitation through bank partnerships, and financial consulting 
-                for individuals and enterprises. Over 15 years of proven experience in Gujarat with seamless loan approvals.
-              </p>
-              <div className="hero-stats">
+              
+              <div className="hero-subtitle animate-in">
+                <div className="subtitle-card">
+                  <div className="subtitle-icon">💼</div>
+                  <p>Trusted expertise in taxation, loan facilitation through bank partnerships, and financial consulting for individuals and enterprises.</p>
+                </div>
+                <div className="subtitle-card">
+                  <div className="subtitle-icon">📍</div>
+                  <p>Over 15 years of proven experience in Gujarat with seamless loan approvals.</p>
+                </div>
+              </div>
+
+              <div className="hero-stats animate-in">
                 <div className="stat-item">
-                  <span className="stat-number">500+</span>
+                  <div className="stat-ring">
+                    <span className="stat-number" data-target="500" data-suffix="+">0</span>
+                  </div>
                   <span className="stat-label">Loans Processed</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">15+</span>
+                  <div className="stat-ring">
+                    <span className="stat-number" data-target="15" data-suffix="+">0</span>
+                  </div>
                   <span className="stat-label">Bank Partners</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">95%</span>
-                  <span className="stat-label">Loan Approval Rate</span>
+                  <div className="stat-ring">
+                    <span className="stat-number" data-target="95" data-suffix="%">0</span>
+                  </div>
+                  <span className="stat-label">Approval Rate</span>
                 </div>
               </div>
-              <div className="hero-actions">
+
+              <div className="hero-actions animate-in">
                 <Link to="/contact" className="btn-primary">
-                  Schedule Consultation
+                  <span>Schedule Consultation</span>
+                  <span className="btn-arrow">→</span>
                 </Link>
                 <Link to="/services" className="btn-secondary">
                   View Services
