@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
+import arhamLogo from '../images/arham.png';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -12,7 +13,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/" onClick={closeMenu}>Arham Consultancy</Link>
+        <Link to="/" onClick={closeMenu}>
+          <img src={arhamLogo} alt="Arham Consultancy" className="navbar-logo-img" />
+        </Link>
       </div>
       <div className={`navbar-toggle${open ? ' open' : ''}`} onClick={handleToggle}>
         <span className="bar"></span>

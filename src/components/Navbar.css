@@ -21,6 +21,14 @@
   letter-spacing: -0.025em;
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
 }
 
 .navbar-logo a:hover {
