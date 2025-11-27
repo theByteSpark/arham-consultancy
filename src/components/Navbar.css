@@ -149,6 +149,8 @@
     width: 100%;
     text-align: center;
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
   .navbar-links a {
     font-size: 1rem;
@@ -158,9 +160,10 @@
     display: block;
     text-decoration: none;
     transition: all 0.3s ease;
-    margin: 0.25rem 0;
+    margin: 0.25rem auto;
     font-weight: 500;
     width: 90%;
+    text-align: center;
   }
   .navbar-links a:hover {
     background: #f1f5f9;
@@ -192,9 +195,17 @@
     border-radius: 0 0 8px 8px;
     gap: 0.3rem;
   }
+  .navbar-links li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .navbar-links a {
     font-size: 0.92rem;
-    padding: 0.5rem 0.1rem;
+    padding: 0.6rem 1rem;
+    width: 85%;
+    text-align: center;
+    margin: 0.2rem auto;
   }
 }
 

@@ -21,7 +21,7 @@ function Contact() {
   // Animation refs
   const formSectionRef = useScrollAnimation('animate-in');
   const infoSectionRef = useScrollAnimation('animate-in');
-  const mapSectionRef = useScrollAnimation('animate-in');
+  // Map doesn't need animation ref - it was causing visibility issues
 
   // Validation
   const validate = () => {
@@ -155,7 +155,7 @@ function Contact() {
           </p>
           <div className="contact-info-grid">
             <div className="contact-info-card">
-              <FaMapMarkerAlt className="contact-info-icon" />
+              {/* <FaMapMarkerAlt className="contact-info-icon" /> */}
               <div className="contact-info-details">
                 <div className="contact-info-label">Office Address</div>
                 <div className="contact-info-value">
@@ -165,7 +165,7 @@ function Contact() {
               </div>
             </div>
             <div className="contact-info-card">
-              <FaPhoneAlt className="contact-info-icon" />
+              {/* <FaPhoneAlt className="contact-info-icon" /> */}
               <div className="contact-info-details">
                 <div className="contact-info-label">Phone Number</div>
                 <a href="tel:+919999999999" className="contact-info-value">
@@ -174,7 +174,7 @@ function Contact() {
               </div>
             </div>
             <div className="contact-info-card">
-              <FaEnvelope className="contact-info-icon" />
+              {/* <FaEnvelope className="contact-info-icon" /> */}
               <div className="contact-info-details">
                 <div className="contact-info-label">Email Address</div>
                 <a href="mailto:info@arhamtax.com" className="contact-info-value">
@@ -185,7 +185,7 @@ function Contact() {
           </div>
 
           {/* Google Map */}
-          <div className="contact-map-container" ref={mapSectionRef}>
+          <div className="contact-map-container">
             <iframe
               title="Arham Tax Consultancy Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.123456789!2d72.5713623154321!3d23.0225059849436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f7b0b0b0b0%3A0x123456789abcdef!2sArham%20Tower!5e0!3m2!1sen!2sin!4v1694700000000!5m2!1sen!2sin"

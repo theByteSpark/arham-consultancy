@@ -71,9 +71,9 @@ const Footer = () => (
     <div className="footer-bottom">
       <span>© {new Date().getFullYear()} Arham Tax Consultancy. All rights reserved.</span>
       <span>
-        Designed By&nbsp;
-        <a style={{color:'white'}} href='https://thebytespark.com'>
-          Bytespark
+        Handcrafted By&nbsp;
+        <a style={{color:'#3b82f6'}} href='https://thebytespark.com'>
+          theBytespark
         </a> 
       </span>
     </div>
