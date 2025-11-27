@@ -63,11 +63,9 @@ export default function Home() {
               
               <div className="hero-subtitle animate-in">
                 <div className="subtitle-card">
-                  <div className="subtitle-icon">💼</div>
                   <p>Trusted expertise in taxation, loan facilitation through bank partnerships, and financial consulting for individuals and enterprises.</p>
                 </div>
                 <div className="subtitle-card">
-                  <div className="subtitle-icon">📍</div>
                   <p>Over 15 years of proven experience in Gujarat with seamless loan approvals.</p>
                 </div>
               </div>
