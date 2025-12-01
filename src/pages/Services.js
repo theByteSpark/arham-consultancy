@@ -175,7 +175,7 @@ function Services() {
 			</section>
 
 			{/* Pricing Section */}
-			<section className="pricing-section">
+			{/* <section className="pricing-section">
 				<h2 className="pricing-title">Engagement Models</h2>
 				<div className="pricing-grid">
 					<div className="pricing-card glass-card">
@@ -214,7 +214,7 @@ function Services() {
 						<button className="pricing-btn">Get Started</button>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* How We Work */}
 			<section className="how-we-work-section fade-in">
