@@ -3,10 +3,10 @@ import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedin, FaEnvelope, FaPhoneAlt
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
-const address = '123 Business Street, Ahmedabad, Gujarat';
+const address = '303, Anjaneya Prime, Nr. HDFC Bank, Waghawadi Road, Bhavnagar';
 const subheader = 'Your Trusted Partner for Tax, Loan & Financial Solutions';
-const phone = '+91 99999 99999';
-const email = 'info@arhamtax.com';
+const phone = '+91 9427217754 | +91 8849381276';
+const email = 'ronak.arhamtaxconsultancy@gmail.com';
 
 const Footer = () => (
   <footer className="footer arham-footer">
@@ -46,10 +46,24 @@ const Footer = () => (
         <h3 className="footer-section-title">Contact Us</h3>
         <div className="footer-contact-simple">
           <div className="footer-contact-item">
-            <span className="footer-contact-label"><FaEnvelope className="footer-contact-icon" /></span> <a href={`mailto:${email}`}>{email}</a>
+            <span className="footer-contact-label"><FaEnvelope className="footer-contact-icon" /></span>
+            <a href={`mailto:${email}`}>{email}</a>
           </div>
-          <div className="footer-contact-item">
-            <span className="footer-contact-label"><FaPhoneAlt className="footer-contact-icon" /></span> <a href={`tel:${phone}`}>{phone}</a>
+          <div className="footer-contact-item footer-contact-phones">
+            <span className="footer-contact-label"><FaPhoneAlt className="footer-contact-icon" /></span>
+            <div className="footer-phone-list">
+              {phone.split('|').map((p, idx) => {
+                const cleaned = p.trim();
+                // remove spaces from tel value for href, keep display readable
+                const telHref = cleaned.replace(/\s+/g, '');
+                return (
+                  <>
+                    <a key={idx} className="footer-phone-link" href={`tel:${telHref}`}>{cleaned}</a>
+                    {idx < phone.split('|').length - 1 && <span>&nbsp;|&nbsp;</span>}
+                  </>
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className="footer-social">

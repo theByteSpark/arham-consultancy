@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import "./Home.css";
 import Footer from "../components/Footer";
-import LoanImage from "../images/loan-con.avif";
+import LoanImage from "../images/loan-con.jpg";
 import FinancialServicesImage from "../images/fin-sevice.jpeg";
 import AboutHeroImage from "../images/about-hero.png";
 import TaxConsultationImage from "../images/tax-xon.webp";
