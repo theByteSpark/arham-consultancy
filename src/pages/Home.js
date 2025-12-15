@@ -99,10 +99,10 @@ export default function Home() {
           </div>
           <div className="hero-container">
             <div className="hero-content">
-              <div className="hero-badge animate-in">
+              {/* <div className="hero-badge animate-in">
                 <FaCertificate className="badge-icon" />
                 <span>Certified Tax & Financial Consultants</span>
-              </div>
+              </div> */}
               
               <h1 className="hero-title animate-in">
                 <span className="title-line">Financial & Loan</span>
