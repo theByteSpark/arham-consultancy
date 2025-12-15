@@ -54,7 +54,6 @@ const Footer = () => (
             <div className="footer-phone-list">
               {phone.split('|').map((p, idx) => {
                 const cleaned = p.trim();
-                // remove spaces from tel value for href, keep display readable
                 const telHref = cleaned.replace(/\s+/g, '');
                 return (
                   <>

@@ -17,6 +17,9 @@ function Contact() {
   const [error, setError] = useState("");
   const [status, setStatus] = useState("");
   const timerRef = useRef(null);
+  const address = '303, Anjaneya Prime, Nr. HDFC Bank, Waghawadi Road, Bhavnagar';
+  const phone = '+91 9427217754 | +91 8849381276';
+  const email = 'ronak.arhamtaxconsultancy@gmail.com';
 
   // Animation refs
   const formSectionRef = useScrollAnimation('animate-in');
@@ -72,7 +75,7 @@ function Contact() {
       <div className="contact-main-content">
         {/* Section 1: Contact Form */}
         <section className="contact-form-section fade-up" ref={formSectionRef}>
-          <h2 className="contact-form-title">Send us a Message</h2>
+          <h2 className="contact-info-title">Send us a Message</h2>
           <p className="contact-form-subtitle">
             Fill out the form below and we'll get back to you within 24 hours to discuss how we can help you achieve your financial goals.
           </p>
@@ -159,8 +162,8 @@ function Contact() {
               <div className="contact-info-details">
                 <div className="contact-info-label">Office Address</div>
                 <div className="contact-info-value">
-                  101, Arham Tower, CG Road<br />
-                  Ahmedabad, Gujarat 380009, India
+                  303, Anjaneya Prime<br/>
+                  Nr. HDFC Bank, Waghawadi Road, Bhavnagar
                 </div>
               </div>
             </div>
@@ -168,9 +171,21 @@ function Contact() {
               {/* <FaPhoneAlt className="contact-info-icon" /> */}
               <div className="contact-info-details">
                 <div className="contact-info-label">Phone Number</div>
-                <a href="tel:+919999999999" className="contact-info-value">
+                <div>
+                  {phone.split('|').map((p, idx) => {
+                    const cleaned = p.trim();
+                    const telHref = cleaned.replace(/\s+/g, '');
+                    return (
+                      <>
+                        <a key={idx} className="contact-info-value" href={`tel:${telHref}`}>{cleaned}</a>
+                        {idx < phone.split('|').length - 1 && <span>&nbsp;|&nbsp;</span>}
+                      </>
+                    );
+                  })}
+                </div>
+                {/* <a href="tel:+919999999999">
                   +91 99999 99999
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="contact-info-card">
@@ -178,7 +193,7 @@ function Contact() {
               <div className="contact-info-details">
                 <div className="contact-info-label">Email Address</div>
                 <a href="mailto:info@arhamtax.com" className="contact-info-value">
-                  info@arhamtax.com
+                  {email}
                 </a>
               </div>
             </div>
@@ -188,7 +203,7 @@ function Contact() {
           <div className="contact-map-container">
             <iframe
               title="Arham Tax Consultancy Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.123456789!2d72.5713623154321!3d23.0225059849436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f7b0b0b0b0%3A0x123456789abcdef!2sArham%20Tower!5e0!3m2!1sen!2sin!4v1694700000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.5057184761126!2d72.14320487346005!3d21.76076856223854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5bdc324c1c89%3A0xdd204c0ac00e38c2!2sAnjaneya%20Prime!5e1!3m2!1sen!2sin!4v1765818180167!5m2!1sen!2sin"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
