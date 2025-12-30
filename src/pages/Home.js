@@ -7,11 +7,11 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import "./Home.css";
 import Footer from "../components/Footer";
-import LoanImage from "../images/loan-con.jpg";
-import FinancialServicesImage from "../images/fin-sevice.jpeg";
+import LoanImage from "../images/loan-con.jpeg";
+import FinancialServicesImage from "../images/fin-services.jpeg";
 import AboutHeroImage from "../images/about-hero.png";
-import TaxConsultationImage from "../images/tax-xon.webp";
-import BusinessRegImage from "../images/business-register.jpeg";
+import TaxConsultationImage from "../images/tax-consultant.jpeg";
+import BusinessRegImage from "../images/busiess-reg.jpeg";
 
 // Bank Logo Imports (local images)
 import AxisBankLogo from "../images/banks/axis-bank.svg";

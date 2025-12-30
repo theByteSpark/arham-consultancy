@@ -36,8 +36,8 @@ function About() {
         }}
       />
 
-      {/* Our Story Section */}
-      <section className="arham-story-section" id="arham-story-section">
+      
+      {/* <section className="arham-story-section" id="arham-story-section">
         <div className="arham-story-grid">
           <div className="arham-story-img slide-in-left">
             <img src={AboutContentPhoto} alt="Documents and finance workspace" />
@@ -67,7 +67,7 @@ function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mission & Vision Section */}
       <section className="arham-mission-vision fade-up" ref={missionVisionRef}>

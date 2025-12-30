@@ -530,12 +530,12 @@
 
 .service-image {
   width: 100%;
-  height: 140px;
+  height: 210px;
   overflow: hidden;
   position: relative;
 }
 
-.service-image::after {
+/* .service-image::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -543,7 +543,7 @@
   right: 0;
   height: 40px;
   background: linear-gradient(to top, rgba(255,255,255,0.9), transparent);
-}
+} */
 
 .card-image {
   width: 100%;
