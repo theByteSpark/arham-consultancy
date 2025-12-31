@@ -75,12 +75,12 @@ function About() {
           <div className="arham-mv-card glass-card hover-lift">
             <FaBullseye className="arham-mv-icon" />
             <h3 className="arham-mv-title underline-animate">Mission</h3>
-            <p className="arham-mv-desc">Deliver accurate, timely, and personalized financial services.</p>
+            <p className="arham-mv-desc mt-20">Deliver accurate, timely, and personalized financial services.</p>
           </div>
           <div className="arham-mv-card glass-card hover-lift">
             <FaEye className="arham-mv-icon" />
             <h3 className="arham-mv-title underline-animate">Vision</h3>
-            <p className="arham-mv-desc">Be the most trusted financial consulting partner for businesses and individuals.</p>
+            <p className="arham-mv-desc mt-20">Be the most trusted financial consulting partner for businesses and individuals.</p>
           </div>
         </div>
       </section>
@@ -98,9 +98,9 @@ function About() {
               With 15+ years of experience in tax, loan consultation, accounting, and financial planning, Ronak Shah has built strong relationships with leading banks to ensure seamless loan approvals for clients. His expertise spans tax strategy, loan facilitation, and business advisory, always with a focus on personalized, client-first service.
             </p>
             <div className="arham-founder-actions">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="arham-founder-linkedin-btn">
+              {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="arham-founder-linkedin-btn">
                 <FaLinkedin /> LinkedIn
-              </a>
+              </a> */}
               <Link to="/contact" className="arham-founder-consult-btn">Book a Consultation</Link>
             </div>
           </div>

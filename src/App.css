@@ -1,3 +1,7 @@
+html{
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.mt-20{
+  margin-top: 20px;
 }

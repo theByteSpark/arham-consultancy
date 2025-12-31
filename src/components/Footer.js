@@ -65,7 +65,7 @@ const Footer = () => (
             </div>
           </div>
         </div>
-        <div className="footer-social">
+        {/* <div className="footer-social">
           <a href="https://instagram.com" className="footer-icon" aria-label="Instagram">
             <FaInstagram />
           </a>
@@ -78,7 +78,7 @@ const Footer = () => (
           <a href="https://linkedin.com" className="footer-icon" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
     <div className="footer-bottom">
