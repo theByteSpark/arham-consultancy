@@ -27,6 +27,7 @@ const Navbar = () => {
         <li><Link to="/about" onClick={closeMenu} className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
         <li><Link to="/services" onClick={closeMenu} className={location.pathname === '/services' ? 'active' : ''}>Services</Link></li>
         <li><Link to="/contact" onClick={closeMenu} className={location.pathname === '/contact' ? 'active' : ''}>Contact Us</Link></li>
+        <li><Link to="/calculator" onClick={closeMenu} className={location.pathname === '/calculator' ? 'active' : ''}>Calculator</Link></li>
       </ul>
     </nav>
   );

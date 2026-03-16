@@ -1,0 +1,441 @@
+.calculator-page {
+  background: #ffffff;
+  min-height: 100vh;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.calculator-main {
+  background: #f8fafc;
+  padding: 4.5rem 1.5rem;
+}
+
+.calculator-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.calculator-section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.calculator-section-header h2 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.calculator-section-header p {
+  margin-top: 0.8rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  color: #64748b;
+}
+
+.calculator-tab-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-tab-btn {
+  background: #ffffff;
+  color: #183256;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.9rem 1.8rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.cta-tab-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+}
+
+.cta-tab-btn.active {
+  background: #183256;
+  color: #ffffff;
+  border-color: #183256;
+  box-shadow: 0 10px 25px rgba(24, 50, 86, 0.22);
+}
+
+.calculator-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 40px rgba(30, 41, 59, 0.1);
+  padding: 2rem;
+}
+
+.calculator-card h3 {
+  margin: 0 0 1.35rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.input-group + .input-group {
+  margin-top: 1.15rem;
+}
+
+.input-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-head label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.input-chip {
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #183256;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.number-input-wrap {
+  position: relative;
+}
+
+.number-input-wrap input[type="number"] {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.number-input-wrap input[type="number"]:focus {
+  outline: none;
+  border-color: #183256;
+  box-shadow: 0 0 0 3px rgba(24, 50, 86, 0.1);
+}
+
+.number-input-wrap input[type="number"].with-prefix {
+  padding: 0 0.85rem 0 2rem;
+}
+
+.number-input-wrap input[type="number"].with-suffix {
+  padding: 0 4.5rem 0 0.85rem;
+}
+
+.input-adornment {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.input-adornment.prefix {
+  left: 0.75rem;
+}
+
+.input-adornment.suffix {
+  right: 0.75rem;
+}
+
+.range-slider {
+  width: 100%;
+  margin-top: 0.7rem;
+  accent-color: #183256;
+  cursor: pointer;
+}
+
+.range-meta {
+  margin-top: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.calculate-btn {
+  margin-top: 1.3rem;
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #183256;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background: #0f1a2e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(24, 50, 86, 0.3);
+}
+
+.result-box {
+  margin-top: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  padding: 1rem;
+}
+
+.result-box h4 {
+  margin: 0 0 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #183256;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.2rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-family: "Inter", sans-serif;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+.result-row.total {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.result-row strong {
+  color: #183256;
+}
+
+.mail-btn {
+  margin-top: 0.85rem;
+  width: 100%;
+  height: 44px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #183256;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mail-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+.mail-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 1rem;
+}
+
+.mail-modal {
+  width: 100%;
+  max-width: 430px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+  padding: 1.2rem 1.2rem 1rem;
+}
+
+.mail-modal h4 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.mail-modal p {
+  margin: 0.45rem 0 0.95rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.92rem;
+  color: #64748b;
+}
+
+.mail-field + .mail-field {
+  margin-top: 0.75rem;
+}
+
+.mail-field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.mail-field input {
+  width: 100%;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 0 0.75rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.mail-field input:focus {
+  outline: none;
+  border-color: #183256;
+  box-shadow: 0 0 0 3px rgba(24, 50, 86, 0.1);
+}
+
+.mail-error {
+  margin-top: 0.7rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  color: #dc2626;
+}
+
+.mail-actions {
+  margin-top: 0.95rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.mail-actions button {
+  height: 40px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0 1rem;
+}
+
+.mail-cancel {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+}
+
+.mail-cancel:hover {
+  background: #f8fafc;
+}
+
+.mail-send {
+  border: 1px solid #183256;
+  background: #183256;
+  color: #ffffff;
+}
+
+.mail-send:hover {
+  background: #0f1a2e;
+  border-color: #0f1a2e;
+}
+
+.result-empty {
+  margin-top: 1.25rem;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.92rem;
+  color: #64748b;
+  text-align: center;
+  background: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .calculator-main {
+    padding: 3rem 1rem;
+  }
+
+  .calculator-section-header h2 {
+    font-size: 2rem;
+  }
+
+  .calculator-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .calculator-main {
+    padding: 2.5rem 1rem;
+  }
+
+  .calculator-section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .calculator-section-header p {
+    font-size: 0.95rem;
+  }
+
+  .calculator-tab-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-tab-btn {
+    width: 100%;
+  }
+
+  .calculator-card {
+    padding: 1rem;
+  }
+
+  .calculator-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .input-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}

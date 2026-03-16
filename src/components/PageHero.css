@@ -113,7 +113,7 @@
 }
 
 .page-hero-btn {
-  background: #3b82f6;
+  background: #183256;
   color: white;
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
@@ -128,9 +128,9 @@
 }
 
 .page-hero-btn:hover {
-  background: #2563eb;
+  background: #0f1a2e;
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 25px rgba(24, 50, 86, 0.3);
 }
 
 /* Fade-in animation */
