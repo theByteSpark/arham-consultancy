@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import useScrollAnimation from "../hooks/useScrollAnimation";
@@ -17,7 +16,6 @@ function Contact() {
   const [error, setError] = useState("");
   const [status, setStatus] = useState("");
   const timerRef = useRef(null);
-  const address = '303, Anjaneya Prime, Nr. HDFC Bank, Waghawadi Road, Bhavnagar';
   const phone = '+91 9427217754 | +91 8849381276';
   const email = 'ronak.arhamtaxconsultancy@gmail.com';
 
@@ -171,15 +169,17 @@ function Contact() {
               {/* <FaPhoneAlt className="contact-info-icon" /> */}
               <div className="contact-info-details">
                 <div className="contact-info-label">Phone Number</div>
-                <div>
+                <div className="contact-phone-list">
                   {phone.split('|').map((p, idx) => {
                     const cleaned = p.trim();
                     const telHref = cleaned.replace(/\s+/g, '');
                     return (
-                      <>
+                      <span className="contact-phone-item" key={cleaned}>
                         <a key={idx} className="contact-info-value" href={`tel:${telHref}`}>{cleaned}</a>
-                        {idx < phone.split('|').length - 1 && <span>&nbsp;|&nbsp;</span>}
-                      </>
+                        {idx < phone.split('|').length - 1 && (
+                          <span className="contact-phone-separator" aria-hidden="true">&nbsp;|&nbsp;</span>
+                        )}
+                      </span>
                     );
                   })}
                 </div>
