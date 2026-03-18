@@ -4,7 +4,7 @@ import PageHero from "../components/PageHero";
 import HeroImage from "../images/about-hero.png";
 import "./Calculator.css";
 
-const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_BASE_URL || "http://localhost:5000";
+const BACKEND_BASE_URL = "https://utility-backend-service.onrender.com"
 
 const formatINR = (value) =>
   `\u20B9 ${new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(
